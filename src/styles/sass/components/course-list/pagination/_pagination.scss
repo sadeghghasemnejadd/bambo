@@ -1,0 +1,44 @@
+.pagination{
+    margin: 4rem 0 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2.5rem;
+    &__pages{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .pagination__page{
+            margin: 0 .5rem;
+            min-width: 4rem;
+            input[type="radio"]{
+                display: none;
+            }
+            &:hover label{
+                color: $color-white;
+                background-color: $color-primary;
+            }
+            label{
+                cursor: pointer;
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: .5rem 1.5rem;
+            }
+            input[type="radio"]:checked + label{
+                color: $color-white;
+                background-color: $color-primary;
+            }
+        }
+    }
+    &__next, &__prev{
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: .5rem 1.5rem;
+        color: $color-white;
+        background-color: $color-primary;
+    }
+}

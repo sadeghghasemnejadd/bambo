@@ -1,0 +1,10 @@
+.courses {
+  display: flex;
+  justify-content: space-between;
+  @include response(md) {
+    display: block;
+  }
+  @include response(sm) {
+    margin-bottom: 3.2rem;
+  }
+}

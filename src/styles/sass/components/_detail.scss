@@ -1,0 +1,26 @@
+.detail {
+  width: 60rem;
+  height: 60rem;
+  border: $color-gray solid 0.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+  padding: 0 3.2rem;
+  gap: 3.2rem;
+  position: relative;
+  @include response(md) {
+    width: 100%;
+  }
+  &__title {
+    font-family: iransans-bold;
+    color: $color-primary;
+  }
+  &__button {
+    position: absolute;
+    bottom: 0;
+    left: 3.2rem;
+    transform: translateY(50%);
+  }
+}

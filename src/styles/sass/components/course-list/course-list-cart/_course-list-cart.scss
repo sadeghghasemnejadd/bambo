@@ -1,0 +1,84 @@
+$card-padding: .5rem 1.5rem;
+$color-text: #3e7788;
+$color-border: #99b4bc;
+$color-price: #09b28b;
+.courses__card{
+    background-color: $color-white;
+    width: 100%;
+    height: 45rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    user-select: none;
+    position: relative;
+    &:hover &--img{
+        max-height: 20rem;
+    }
+    &--img{
+        width: 100%;
+        max-height: 30rem;
+        overflow: hidden;
+        transition: max-height .5s;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &--topic{
+        padding: $card-padding;
+        color: $color-primary;
+        margin: .5rem 0;
+    }
+    &--teacher{
+        padding: $card-padding;
+        color: $color-text;
+    }
+    &--extra{
+        // width: 100%;
+        width: calc(100% - 3rem);
+        margin: 0 1.5rem 1rem 1.5rem;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: .2rem solid $color-border;
+        .courses__card--capacity {
+            color: $color-text;
+        }
+        .courses__card--dtails{
+            background-color: $color-primary;
+            color: $color-white;
+            padding: .35rem 1.3rem;
+            cursor: pointer;
+        }
+    }
+    &--price{
+        align-self: flex-start;
+        display: flex;
+        gap: .5rem;
+        padding: $card-padding;
+        margin-bottom: .5rem;
+        color: $color-price;
+    }
+    &:hover &--seebtn{
+        height: 4rem;
+    }
+    &--seebtn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 0;
+        width: 10rem;
+        overflow: hidden;
+        align-self: center;
+        background-color: $color-bg;
+        margin-bottom: 1rem;
+        color: $color-primary;
+        cursor: pointer;
+        transition: height .6s;
+    }
+}

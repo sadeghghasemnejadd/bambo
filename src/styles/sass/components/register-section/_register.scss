@@ -1,0 +1,125 @@
+$color-green: #06795e;
+$icon-width: 25px;
+$icon-height: 25px;
+.register {
+  width: 100%;
+  direction: rtl;
+  display: flex;
+  height: 100vh;
+
+  @include response(sm) {
+    flex-direction: column;
+  }
+  &__img {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100vh;
+    order: 1;
+
+    @include response(sm) {
+      order: -1;
+      width: 100%;
+      height: 30vh;
+    }
+    background: linear-gradient(
+        0deg,
+        rgba($color-green, 0.7),
+        rgba($color-green, 0.7)
+      ),
+      url(./../../../../assets/images/register.jpg);
+    background-size: cover;
+    position: relative;
+    align-items: center;
+
+    &__contact {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &__contact__name {
+      @include response(sm) {
+        flex-direction: column;
+      }
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      align-items: center;
+      border-bottom: 1px solid white;
+      padding-bottom: 1.5rem;
+    }
+    &__contact__name__title {
+      order: -1;
+      @include response(sm) {
+        order: 1;
+      }
+    }
+    &__contact__icons {
+      display: flex;
+      justify-content: space-between;
+      @include response(sm) {
+        display: none;
+      }
+    }
+
+    &__home {
+      cursor: pointer;
+      margin-top: auto;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100vh;
+    padding: 4rem;
+    //height: 70vh;
+    @include response(sm) {
+      width: 100%;
+      height: 70vh;
+    }
+  }
+  &__form--container {
+    width: 100%;
+    gap: 0.5rem;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    @include response(sm) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__form__btn--container {
+    display: flex;
+    margin-right: auto;
+
+    @include response(sm) {
+      flex-direction: column;
+      align-items: center;
+      margin-right: 0;
+      gap: 1rem;
+    }
+    .btn {
+      @include response(sm) {
+        width: 70%;
+        font-size: larger;
+        gap: 2rem;
+      }
+    }
+  }
+
+  &__form__validation {
+    padding-top: 0.5rem;
+    color: red;
+  }
+}

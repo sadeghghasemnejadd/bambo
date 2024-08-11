@@ -1,0 +1,86 @@
+.hero {
+  direction: rtl;
+  background: linear-gradient(
+      0deg,
+      rgba($color-green, 0.7),
+      rgba($color-green, 0.7)
+    ),
+    url("./../../../../assets/images/hero.png");
+
+  background-size: cover;
+  background-position: center top;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  &__info {
+    padding: 1.6rem 6rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 2.4rem;
+    height: calc(100vh - 4.8rem);
+
+    &__title {
+      font-size: 3.2rem;
+      color: $color-white;
+    }
+
+    &__about {
+      display: flex;
+      gap: 2rem;
+    }
+    &__des {
+      color: $color-white;
+      font-size: 1.8rem;
+      width: 40%;
+    }
+
+    @include response(md) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      &__about {
+        flex-direction: column;
+      }
+      &__des {
+        width: 100%;
+        font-size: 2rem;
+      }
+
+      &__title {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &__search {
+    direction: rtl;
+    display: flex;
+    &__icon {
+      width: 4rem;
+      padding-right: 1.6rem;
+      background: linear-gradient(
+        0,
+        rgba($color-primary, 0.5),
+        rgba($color-primary, 0.5)
+      );
+    }
+    &__input {
+      background: linear-gradient(
+        0,
+        rgba($color-primary, 0.5),
+        rgba($color-primary, 0.5)
+      );
+      border: none;
+      outline: none;
+      padding: 1rem 0.5rem;
+      font-family: iransans;
+      color: $color-white;
+      width: 100%;
+      &::placeholder {
+        color: $color-white;
+      }
+    }
+  }
+}

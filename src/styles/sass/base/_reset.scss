@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: iransans;
+  @include response(xl) {
+    font-size: 55%;
+  }
+  @include response(lg) {
+    font-size: 50%;
+  }
+  @include response(md) {
+    font-size: 45%;
+  }
+  @include response(sm) {
+    font-size: 40%;
+  }
+}
+body {
+  font-size: 1.6rem;
+}
+a {
+  all: unset;
+  text-decoration: none;
+}
+ol,ul,li{
+  list-style: none;
+}

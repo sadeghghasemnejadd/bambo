@@ -1,0 +1,218 @@
+$color-green: #06795e;
+$icon-width: 25px;
+$icon-height: 25px;
+.login {
+  width: 100%;
+  direction: rtl;
+  display: flex;
+  height: 100vh;
+
+  @include response(sm) {
+    flex-direction: column;
+  }
+  &__img {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100vh;
+    @include response(sm) {
+      width: 100%;
+      height: 40vh;
+    }
+    background: linear-gradient(
+        0deg,
+        rgba($color-green, 0.7),
+        rgba($color-green, 0.7)
+      ),
+      url(./../../../../assets/images/login.jpg);
+    background-size: cover;
+    position: relative;
+    align-items: center;
+
+    &__contact {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &__contact__name {
+      @include response(sm) {
+        flex-direction: column;
+      }
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      align-items: center;
+      border-bottom: 1px solid white;
+      padding-bottom: 1.5rem;
+    }
+    &__contact__name__title {
+      order: -1;
+      @include response(sm) {
+        order: 1;
+      }
+    }
+    &__contact__icons {
+      display: flex;
+      justify-content: space-between;
+      @include response(sm) {
+        display: none;
+      }
+    }
+
+    &__home {
+      margin-top: auto;
+      margin-bottom: 1.5rem;
+      display: block;
+      cursor: pointer;
+      @include response(sm) {
+        display: none;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    padding: 4rem;
+    height: 100vh;
+    @include response(sm) {
+      width: 100%;
+      height: 60vh;
+    }
+  }
+  &__form--container {
+    height: 100%;
+    width: 100%;
+    gap: 2rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    @include response(sm) {
+      justify-content: flex-start;
+    }
+  }
+  &__form__title {
+    display: flex;
+    justify-content: space-between;
+    img {
+      display: none;
+    }
+    @include response(sm) {
+      img {
+        display: block;
+        content: url(./../../../../assets/images/home-primary.svg);
+      }
+    }
+  }
+
+  &__form__extra {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include response(sm) {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  &__form__btn--container {
+    display: flex;
+    margin-right: auto;
+
+    @include response(sm) {
+      flex-direction: column;
+      align-items: center;
+      margin-right: 0;
+      gap: 1rem;
+    }
+    .btn {
+      @include response(sm) {
+        width: 70%;
+        font-size: larger;
+        gap: 2rem;
+      }
+    }
+  }
+
+  &__form__validation {
+    padding-top: 0.5rem;
+    color: red;
+  }
+}
+/* link */
+.link {
+  font-family: iransans;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.link--primary {
+  color: $color-white;
+  background-color: $color-primary;
+}
+.link--secondary {
+  color: $color-primary;
+  background-color: $color-white;
+}
+/* checkbox */
+.checkbox {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: iransans;
+}
+
+.checkbox--primary {
+  color: $color-primary;
+}
+/* button */
+.btn__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* h2 color */
+h2 {
+  font-family: iransans-dbold;
+}
+.title--primary {
+  color: $color-primary;
+}
+
+.title--secondary {
+  color: $color-white;
+}
+
+/* icon */
+.icon {
+  width: $icon-width;
+  height: $icon-height;
+}
+/* input */
+.input {
+  border-radius: $border-radius-primary * 1rem;
+  border: 0;
+  outline: 0;
+  padding: 1rem 1rem;
+  font-family: iransans;
+}
+
+.input--block {
+  width: 100%;
+}
+
+.input--primary {
+  background-color: $color-gray;
+  color: $color-primary;
+
+  &::placeholder {
+    color: $color-primary;
+  }
+}

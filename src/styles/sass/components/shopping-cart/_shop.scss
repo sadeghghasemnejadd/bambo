@@ -1,0 +1,58 @@
+.shopping-cart {
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  p{
+    color: white;
+    font-size: larger;
+  }
+  &__header {
+    background: linear-gradient(
+        0,
+        rgba($color-green, 0.6),
+        rgba($color-green, 0.6)
+      ),
+      url("../../../../assets/images/course-header.png");
+  }
+  &__contianer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(0, rgba(0, 68, 88, 1), rgba(8, 163, 132, 255));
+    overflow: hidden;
+  }
+  &__items {
+    width: 40%;
+    @include response(sm){
+      width: 90%;
+    }
+    height: 60%;
+    overflow-y: auto;
+    text-align: center;
+  }
+  &__item {
+    color: white;
+    background-color: rgba(0, 68, 88, 0.5);
+    padding: 1rem 2rem;
+    border: 1px solid $color-primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__payment{
+    color: white;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+  .btn{
+    @include response(sm){
+      font-size: larger;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+$color-focus-input: #0cdbab;
+$color-input-background: #00775b;
+$color-input-text: #0cdbab;
+
+.contact {
+  width: 100%;
+  display: flex;
+  height: 60vh;
+  justify-content: space-between;
+  background-color: $color-secondary;
+  direction: rtl;
+
+  @include response(sm) {
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 50%;
+    clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
+
+    @include response(sm) {
+      width: 100%;
+      height: 50vh;
+      clip-path: polygon(0 0, 100% 0%, 100% 69%, 0% 100%);
+    }
+  }
+  &__form {
+    padding: 1rem;
+    width: 50%;
+    @include response(sm) {
+      width: 100%;
+      height: 50vh;
+    }
+  }
+  &__form__validation {
+    padding-top: 0.5rem;
+    color: $color-gray;
+  }
+  &__form__container {
+    gap: 2rem;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+  }
+  &__form__header {
+    white-space: nowrap;
+    color: $color-white;
+  }
+  &__button {
+    align-self: flex-end;
+    & .btn {
+      @include response(sm) {
+        font-size: larger;
+      }
+    }
+  }
+}
+
+.input--secondary {
+  background-color: $color-input-background;
+  color: $color-input-text;
+
+  &::placeholder {
+    color: $color-input-text;
+  }
+  &:focus {
+    border-bottom: 1px solid $color-focus-input;
+  }
+}

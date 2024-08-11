@@ -1,0 +1,96 @@
+.detail-section {
+  direction: rtl;
+  color: $color-primary;
+  padding: 5rem 3rem;
+  display: flex;
+  justify-content: center;
+  @include response(sm) {
+    flex-direction: column;
+    justify-content: center;
+  }
+  gap: 2rem;
+  &__description {
+    padding: 1rem 3rem 2rem;
+  }
+  .card {
+    @include response(sm) {
+      margin: 0 auto;
+      order: -1;
+      font-size: 2rem;
+    }
+    display: flex;
+    flex-direction: column;
+    min-height: 33vh;
+    font-size: 1.2rem;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    position: relative;
+    &__header {
+      border-bottom: 1px solid black;
+      padding-bottom: 1rem;
+      position: relative;
+    }
+    &__body{
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      .div{
+       flex-grow: 1;
+       display: flex;
+       justify-content: center;
+       align-items: flex-end;
+      }
+    }
+    &__heading {
+      text-align: center;
+    }
+    &__price,
+    &__discount,
+    &__remain-price {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      margin: 1rem;
+    }
+    &__price,
+    &__discount {
+      opacity: 70%;
+    }
+    &__discount {
+      span:nth-child(2) {
+        color: $color-red;
+      }
+    }
+    &__remain-price {
+      span:nth-child(2) {
+        color: $color-tertiary;
+      }
+    }
+    &__logo {
+      width: 2rem;
+      position: absolute;
+      top: 0;
+    }
+    &__gray-boxes {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    &__gray-box {
+      display: inline-block;
+      width: 1.5rem;
+      height: 2rem;
+      background-color: #dbdbdb;
+      margin: 0.1rem;
+    }
+    span {
+      white-space: nowrap;
+    }
+    .btn {
+      font-size: 90%;
+      margin-top: 2rem;
+      margin: 2rem auto;
+      display: block;
+    }
+  }
+}

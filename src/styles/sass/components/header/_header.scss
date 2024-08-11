@@ -1,0 +1,91 @@
+.header {
+  direction: rtl;
+  padding: 0 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid rgba(209, 209, 209, 0.2);
+  &--absolute {
+    position: absolute;
+  }
+  &__title {
+    font-size: 2.4rem;
+    color: $color-white;
+  }
+
+  &__links {
+    &--link {
+      display: flex;
+      list-style: none;
+
+      &-item {
+        &-link {
+          width: auto;
+          height: auto;
+          padding: 0.8rem 1.6rem;
+          text-decoration: none;
+          color: $color-white;
+          transition: 0.3s;
+          &:hover {
+            background-color: rgba($color_primary, 0.5);
+          }
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__login {
+    display: flex;
+    &__icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    &__cart {
+      display: flex;
+      align-items: center;
+      &--green {
+        gap: 0.2rem;
+        background-color: green;
+        padding: 0.3rem;
+      }
+      span {
+        color: white;
+      }
+    }
+  }
+  &__menu {
+    width: 2.4rem;
+    display: none;
+    z-index: 10;
+  }
+
+  @media screen and (max-width: 640px) {
+    padding: 1.6rem;
+    &__links {
+      display: none;
+    }
+    &__menu {
+      display: unset;
+    }
+  }
+}
+
+.menu {
+  display: none;
+  @media screen and (max-width: 640px) {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #004458;
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,61 @@
+.information {
+  background: linear-gradient(
+      0deg,
+      rgba($color-black, 0.3),
+      rgba($color-black, 0.3)
+    ),
+    url("./../../../../assets/images/information.png");
+  background-size: cover;
+  height: 100vh;
+  background-position: center top;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 0.125rem;
+  direction: rtl;
+  color: $color-white;
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    background: rgba($color-black, 0.6);
+    padding: 8rem 3rem;
+  }
+
+  &__box__icon {
+    width: 3.5rem;
+  }
+
+  &__box__des {
+    text-align: center;
+  }
+  @include response(md) {
+    flex-direction: column;
+    &__box {
+      padding: 2rem;
+      height: 100%;
+    }
+  }
+
+  // @media screen and (max-width: 330px) {
+  //   flex-direction: column;
+  //   &__box {
+  //     padding: 10px;
+  //     height: 100%;
+  //   }
+
+  //   &__box__title {
+  //     font-size: 16px;
+  //   }
+  //   &__box__des {
+  //     font-size: 14px;
+  //   }
+  //   &__box__icon {
+  //     width: 25px;
+  //   }
+  // }
+}
